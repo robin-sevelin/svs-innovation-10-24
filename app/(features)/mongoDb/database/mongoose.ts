@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import mongoose from 'mongoose';
 
-const uri =
-  'mongodb+srv://admin:admin@robins-database.vozcc.mongodb.net/?retryWrites=true&w=majority&appName=robins-database';
-
 let cached = (globalThis as any).mongoose;
 
 if (!cached) {
@@ -16,7 +13,9 @@ async function dbConnect() {
   }
 
   if (!cached.promise) {
-    cached.promise = mongoose.connect(uri).then((mongoose) => mongoose);
+    cached.promise = mongoose
+      .connect(process.env.URI as string)
+      .then((mongoose) => mongoose);
   }
   cached.conn = await cached.promise;
   return cached.conn;
