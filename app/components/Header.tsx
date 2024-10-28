@@ -1,6 +1,6 @@
-import React from "react";
-import Navigation from "./Navigation";
-import Clock from "./Clock";
+import React from 'react';
+import Navigation from './Navigation';
+import Clock from './Clock';
 
 const Header = () => {
   return (

@@ -1,15 +1,15 @@
-import React from "react";
-import { IUser } from "../lib/models/IUser";
-import Link from "next/link";
+import React from 'react';
+import { IUser } from '../lib/models/IUser';
+import Link from 'next/link';
 
 interface UserViewProps {
-    user: IUser;
-  }
+  user: IUser;
+}
 
-const UserView = ({user}: UserViewProps) => {
+const UserView = ({ user }: UserViewProps) => {
   return (
     <div>
-      <Link href={`/users/${user.id.toString()}`}>{user.firstName}</Link>
+      <Link href={`/users/${user.id}`}>{user.firstName}</Link>
     </div>
   );
 };
