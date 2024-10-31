@@ -1,5 +1,6 @@
 import React from 'react';
 import { IAnimal } from '../lib/models/IAnimal';
+import Link from 'next/link';
 
 interface Props {
   animals: IAnimal[];
@@ -13,7 +14,9 @@ const AnimalsList = ({ animals }: Props) => {
     <div>
       {animals?.map((animal) => (
         <div key={animal.name}>
-          <h2>{animal.name}</h2>
+          <Link href={`/mongoDb/view-animals/${animal.name}`}>
+            <h2>{animal.name}</h2>
+          </Link>
         </div>
       ))}
     </div>
