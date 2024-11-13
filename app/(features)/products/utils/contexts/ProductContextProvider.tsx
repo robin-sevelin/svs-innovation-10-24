@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useReducer } from "react";
-import { ProductContext } from "./productContext";
-import { productReducer } from "../reducers/productReducer";
+import React, { ReactNode, useReducer } from 'react';
+import { ProductContext } from './productContext';
+import { productReducer } from '../reducers/productReducer';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ProductContextProvider = ({ children }: Props) => {

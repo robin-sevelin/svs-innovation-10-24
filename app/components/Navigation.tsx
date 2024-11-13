@@ -17,6 +17,9 @@ const Navigation = () => {
         <li>
           <Link href={'/mongoDb'}>MongoDb</Link>
         </li>
+        <li>
+          <Link href={'/cars'}>Cars</Link>
+        </li>
       </ul>
     </nav>
   );
