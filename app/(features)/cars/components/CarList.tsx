@@ -23,10 +23,10 @@ const CarList = () => {
         id='car-input'
         onChange={(e) => handleChange(e.target.value)}
       />
-      {!filteredCars.length && <p>No search result</p>}
       {filteredCars.map((car) => (
         <CarView key={car.id} car={car} />
       ))}
+      {!filteredCars.length && <p>No search result</p>}
     </div>
   );
 };
